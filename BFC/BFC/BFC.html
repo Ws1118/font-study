@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC</title>
+</head>
+<body>
+    <section id="father">
+        <style>
+            #father {
+                background-color: rgb(145, 176, 177);
+                overflow: hidden;
+            }
+            #father .child {
+            background-color: rgb(12, 197, 221);
+            margin: 15px auto 20px;
+
+        }
+        </style>
+        <div class="child">这是第⼀个div</div>
+        <div style="overflow:hidden">
+            <div class="child">这是第⼆个div</div>
+        </div>
+    </section> 
+    <br />
+       
+    <section id="father1">
+        <style>
+            #father1 {
+                background-color: rgb(145, 176, 177);
+                overflow: hidden;
+            }
+            #father1 .child {
+                font-size: 58px;
+                float: left;
+            }
+        </style>
+        <div class="child">这是⼀个浮动元素</div>
+    </section>
+    <br />
+
+    <section id="father2">
+        <style>
+            #father2 {
+                background-color: rgb(145, 176, 177); 
+            }
+            #father2 .left {
+                background-color: rgb(12, 197, 221);
+                width: 100px;
+                height: 100px;
+                float: left;
+            }
+            #father2 .right {
+                background-color: rgb(0, 90, 71);
+                height: 120px;
+                overflow: hidden;
+            }
+        </style>
+        <div class="left"></div>
+        <div class="right"></div>
+    </section>
+</body>
+</html>
