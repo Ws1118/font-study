@@ -638,3 +638,32 @@ MDN web docs现在给出创建BFC的⽅法有以下⼏种
 ## 总结
 
 CSS3、HTML5的发展和完善让我们编写代码更加简便和快捷，实现的效 果也更加漂亮，例如背景的渐变不再需要背景图⽚的平铺就可以通过CSS 代码直接实现，但是有时候需要经过⼀些转换，才能将这些新技术应⽤到 我们常⻅的功能中去，这需要我们多加思考和保持思维的灵感
+
+# CSS变量&CSS常⻅动画合集
+
+## 概述
+
+CSS变量这个重要的 新功能，所有主要浏览器已经都⽀持了。 合理使⽤它，你会发现原⽣ CSS 从此变得异常强⼤。
+
+CSS动画2D常⻅效果有：移动、旋转、缩放、⾃定义关键帧等，合理 使⽤组合，可形成放⼤、缩⼩、变形、旋转、弹跳、脉冲、隐现等各 种效果
+
+### CSS动画推荐 
+
+- ⿏标悬停动画合集 
+  - Hover.css 
+- 强⼤，在线⽣成 css 动画 
+  - Animista 
+- ⻬全的CSS3动画库 
+  - Animate.css 
+- ⼀个更加丰富css动画库,是 Animate CSS的 增强版 
+  - Vivify 
+- ⼀⼤堆不同动画的集合，总共⼤概有200个 
+  - cssanimation.io 
+- Magic CSS3 Animations 是 CSS3 动画的包，伴有特殊的效果 
+  - MAGIC EFFECTS
+
+*顶部引⼊了font-awesome在线字体图标，不⽤下载⽅便使⽤*
+
+[font-awesome](https://www.runoob.com/font-awesome/fontawesome-tutorial.html)
+
+[font-awesome](https://fontawesome.com/icons?d=gallery&p=2)
