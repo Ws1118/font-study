@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点闪特效</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 0, 0);
+        }
+
+        h1 {
+            font-family: 'fangsong';
+            font-size: 6em;
+            color: rgba(19, 18, 18, 0.8);
+        }
+
+        span {
+            display: table-cell;
+            animation: san 1.5s linear infinite;
+        }
+
+        h1 span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        h1 span:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        h1 span:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        h1 span:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        h1 span:nth-child(5) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes san {
+            0% {
+                color: rgb(255, 255, 255);
+                text-shadow: 0 0 5px rgb(1, 210, 247),
+                    0 0 15px rgb(1, 210, 247),
+                    0 0 25px rgb(1, 210, 247),
+                    0 0 50px rgb(1, 210, 247),
+                    0 0 80px rgb(1, 210, 247),
+                    0 0 120px rgb(1, 210, 247),
+                    0 0 160px rgb(1, 210, 247),
+                    0 0 200px rgb(1, 210, 247);
+            }
+
+            5%,
+            95% {
+                color: rgba(19, 18, 18, 0.8);
+                text-shadow: none;
+            }
+
+            100% {
+                color: rgb(255, 255, 255);
+                text-shadow: 0 0 5px rgb(1, 210, 247),
+                    0 0 15px rgb(1, 210, 247),
+                    0 0 25px rgb(1, 210, 247),
+                    0 0 50px rgb(1, 210, 247),
+                    0 0 80px rgb(1, 210, 247),
+                    0 0 120px rgb(1, 210, 247),
+                    0 0 160px rgb(1, 210, 247),
+                    0 0 200px rgb(1, 210, 247);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <span>北</span>
+        <span>极</span>
+        <span>光</span>
+        <span>之</span>
+        <span>夜</span>
+    </h1>
+</body>
+
+</html>
