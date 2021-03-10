@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <!-- 在标签结尾处加空div标签clear:both
+    不给⽗元素设置⾼度，在最后加上清除浮动的空div
+    原理：添加⼀个空div，利⽤css提⾼的clear:both清除浮动，让⽗级div能⾃动获取到⾼度。
+优点：简单、代码少、浏览器⽀持好、不容易出现怪问题。
+缺点：不少初学者不理解原理；如果⻚⾯浮动布局多，就要增加很多空div，不利于⻚⾯的优化。 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer {
+            width: 80vw;
+            margin: 0 auto;
+            background-color: #2a6288;
+            padding: 10px;
+            /* 父元素不能指定高度 */
+            /* height: 220px; */
+        }
+
+        .outer .inner {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            margin: 10px;
+            float: left;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="clear"></div>
+    </div>
+</body>
+
+</html>

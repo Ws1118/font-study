@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <!-- 解决⽗元素⾼度坍塌问题:⼦元素使⽤了float之后，⽗级盒⼦的⾼度会变为0，称为⽗元素⾼度坍塌。 -->
+    <!-- 问题形成原因：当我们给每个内部的div加上左浮动属性后，它们将从⽂档流脱离，⼜因为⽗元素没有指定⾼度，所以导致⽗元素⽆法获得⾼度 -->
+    <!-- 给⽗级元素单独定义⾼度（height） -->
+    <!-- 原理：如果⽗级元素没有定义⾼度，⽗元素的⾼度完全由⼦元素撑开时，⽗级div⼿动定义height，就解决了⽗级div⽆法⾃动获取到⾼度的问题。
+优点：简单、代码少、容易掌握。
+缺点：只适合⾼度固定的布局，要给出精确的⾼度，如果⾼度和⽗级div不⼀样时，会产⽣问题。对于响应式布局会有很⼤影响。 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer {
+            width: 80vw;
+            margin: 0 auto;
+            background-color: #2a6288;
+            padding: 10px;
+            /* 指定⾼度 */
+            height: 220px;
+        }
+
+        .outer .inner {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            margin: 10px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>

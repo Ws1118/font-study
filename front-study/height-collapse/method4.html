@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <!-- ⽗级div定义 overflow:hidden
+优点：简单、代码少、浏览器⽀持好
+缺点：不能和position配合使⽤，因为超出的尺⼨的会被隐藏。（不建议使⽤此种⽅式，可能会影响⻚⾯元素布局） -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer {
+            width: 80vw;
+            margin: 0 auto;
+            background-color: #2a6288;
+            padding: 10px;
+            /* 父元素设置为overflow：hidden */
+            overflow: hidden;
+        }
+
+        .outer .inner {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            margin: 10px;
+            float: left;
+            /* 缺点：position后，父元素高度又坍塌了 */
+            /* position: absolute; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>

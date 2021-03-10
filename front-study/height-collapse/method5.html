@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <!-- ⽗级div定义 overflow:auto
+    原理：必须定义width或zoom:1，同时不能定义height，使⽤overflow:auto时，浏览器会⾃动检查浮动区域的⾼度
+优点：简单、代码少、浏览器⽀持好
+缺点：内部宽⾼超过⽗级div时，会出现滚动条 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer {
+            width: 80vw;
+            margin: 0 auto;
+            background-color: #2a6288;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        .outer .inner {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            margin: 10px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>

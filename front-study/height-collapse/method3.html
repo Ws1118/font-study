@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <!-- ⽗级div定义 伪类:after 和 zoom
+    原理：元素⽣成伪类的作⽤和效果相当于⽅法2中的原理，但是IE8以上和⾮IE浏览器才⽀持:after，zoom可解决ie6,ie7浮动问题
+优点：浏览器⽀持好、不容易出现奇怪问题，写法是固定的，不理解也可以直接复制使⽤；（推荐使⽤此种⽅法，简单便捷，只需添加⼀个class即可解决问题）
+缺点：css代码多、不少初学者不理解原理，要两句代码结合使⽤才能让主流浏览器都⽀持。 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer {
+            width: 80vw;
+            margin: 0 auto;
+            background-color: #2a6288;
+            padding: 10px;
+        }
+
+        .outer .inner {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            margin: 10px;
+            float: left;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        .clearfix:after {
+            display: block;
+            clear: both;
+            content: "";
+            visibility: hidden;
+            height: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 添加clearfix样式 -->
+    <div class="outer clearfix">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>
