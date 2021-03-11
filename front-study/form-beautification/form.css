@@ -1,0 +1,56 @@
+.input-field,
+.input-field * {
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
+/* 外层的div盒⼦，⽗相⼦绝 */
+.input-field {
+ position: relative;
+ width: 300px;
+ margin: 20px 50px;
+}
+/* ⽂本框的基础样式，边框都去掉了，使⽤span来代替 */
+.input-field input {
+ background-color: transparent;
+ border: none;
+ outline: none;
+ border-radius: 0;
+ height: 45px;
+ width: 100%;
+ padding: 0;
+ font-size: 1em;
+ -webkit-transition: all 0.3s;
+ transition: all 0.3s;
+}
+/* span充当每个⽂本框的下划线，默认未激活样式 */
+.input-field input + span {
+    position: absolute;
+ top: 100%;
+ left: 0;
+ display: inline-block;
+ max-width: 100%;
+ z-index: 0;
+ width: 100%;
+ height: 1px;
+ border-bottom: 1px solid #d9d9d9;
+}
+/* ⽂本框获取焦点时，下划线在0.2秒内缩放到 0（最⼩化），然后再放⼤到
+1，实现⼀种缩放效果 */
+.input-field span:after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ height: 2px;
+ background: #2196f3;
+ -webkit-transform: scale(0);
+ transform: scale(0);
+ -webkit-transition: all 0.2s ease-out;
+ transition: all 0.2s ease-out;
+}
+/* 获得焦点后，下划线缩放倍数（⾃⼰调整下看看效果） */
+.input-field input:focus + span:after {
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
