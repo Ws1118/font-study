@@ -1,0 +1,44 @@
+.bold {
+    /* 加粗 */
+    font-weight: bold;
+}
+
+.italic {
+    /* 斜体 */
+    font-style: italic;
+}
+
+.paragraph1 {
+    /* 字符间距（字与字之间的间距） */
+    letter-spacing: 5px;
+    /* 行间距 */
+    line-height: 30px;
+    /* 空格间距(空格占多大像素) */
+    word-spacing: 100px;
+    /* 文本对齐方式 */
+    /* 左对齐 */
+    text-align: left;
+    /* 文本缩进(文本前空出来多少像素) */
+    /* 默认一个文字大小为16像素。下面代码意思为开头 空两格 */
+    text-indent: 32px;
+    /* 调整文字大小 */
+    font-size: 24px;
+}
+.paragraph2 {
+    letter-spacing: 5px;
+    line-height: 40px;
+    word-spacing: 100px;
+     /* 文本居中对齐 */
+    text-align: center;
+    text-indent: 32px;
+    font-size: 36px;
+}
+.paragraph3 {
+    letter-spacing: 5px;
+    line-height: 40px;
+    word-spacing: 100px;
+     /* 右对齐 */
+    text-align: right;
+    text-indent: 32px;
+    font-size: 12px;
+}
