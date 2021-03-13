@@ -132,11 +132,13 @@ p::first-letter {
     /* 淡⼊淡出动画效果 */
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    /* 透明度 */
     opacity: 0;
 }
 
 /* ⿏标悬停 */
 .mask:hover:after {
+    /* 透明度 */
     opacity: 1;
     -webkit-transform: translate(0, -100%);
     transform: translate(0, -100%);

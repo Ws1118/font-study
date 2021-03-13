@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet</title>
+</head>
+
+<body>
+    <!-- ⽣成带id的标签:元素名 #id名
+    快捷键：div#aaa -->
+    <div id="aaa"></div>
+    <!-- ⽣成带class的标签
+    div.root -->
+    <div class="root"></div>
+    <!-- 混合 -->
+    <div id="aaa"></div>
+    <div class="root"></div>
+    <div id="bbb" class="class1 class2"></div>
+    <!-- ⽣成⼦代结点：>
+    div.root>ul.nav>li.nav-item -->
+    <div class="root">
+        <ul class="nav">
+            <li class="nav-item"></li>
+        </ul>
+    </div>
+    <!-- ⽣成兄弟结点: +
+    div+ul+bq -->
+    <div></div>
+    <ul></ul>
+    <blockquote></blockquote>
+    <!-- ⽣成⽗代结点：^
+    div>p>h1^h2 -->
+    <div>
+        <p>
+        <h1></h1>
+        </p>
+        <h2></h2>
+    </div>
+    <!-- 重复元素：任何元素后⾯加上*n就会被重复n次，⽐如⽣成⼀个包含4个li的ul：
+    ul>li.item*5 -->
+    <ul>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+    </ul>
+    <!-- ⽣成分组：()
+    div>(header>ul>(li>a)*2)+footer>p -->
+    <div>
+        <header>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </header>
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+    <!-- 设置属性:[]
+    a[href="https://www.taobao.com/" title="淘宝"] -->
+    <a href="https://www.taobao.com/" title="淘宝"></a>
+    <!-- 对⽣成内容编号:$
+    ul>li#item$*5 -->
+    <ul>
+        <li id="item1"></li>
+        <li id="item2"></li>
+        <li id="item3"></li>
+        <li id="item4"></li>
+        <li id="item5"></li>
+    </ul>
+    <!-- 上⾯的例⼦是从⼩到⼤，从⼤到⼩可以在$后加@-
+    ul>li#item$@-*5 -->
+    <ul>
+        <li id="item5"></li>
+        <li id="item4"></li>
+        <li id="item3"></li>
+        <li id="item2"></li>
+        <li id="item1"></li>
+    </ul>
+    <!-- 从指定序号3开始 ，⽣成5个
+    ul>li.item$@3*5 -->
+    <ul>
+        <li class="item3"></li>
+        <li class="item4"></li>
+        <li class="item5"></li>
+        <li class="item6"></li>
+        <li class="item7"></li>
+    </ul>
+    <!-- ⽣成⽂本内容:{}
+    ul#id>li.class1{文本}*5 -->
+    <ul id="id">
+        <li class="class1">文本</li>
+        <li class="class1">文本</li>
+        <li class="class1">文本</li>
+        <li class="class1">文本</li>
+        <li class="class1">文本</li>
+    </ul>
+    <!-- ⽣成随机⽂本
+    Emmet的lorem将⽣成⼀段随机⽂本
+    p.aaa>lorem -->
+    <p class="aaa">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Debitis veniam deserunt velit corrupti eum iusto dignissimos error! 
+        Reprehenderit obcaecati beatae, omnis numquam enim ipsam praesentium 
+        laudantium repellendus, soluta sequi vitae.</p>
+</body>
+
+</html>
