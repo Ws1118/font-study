@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+.cc-clearfix:before,
+.cc-clearfix:after {
+  content: '';
+  display: table;
+}
+
+.cc-clearfix:after {
+  clear: both;
+}
+
+.cc-float--left,
+.cc-float--right {
+  float: left;
+}
+
+.cc-t-no-wrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cc-t-mr-2 {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cc-t-mr-3 {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.cc-tri-l {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: left left 0 left;
+  border-color: 10px transparent transparent transparent;
+  margin-bottom: 10px;
+}
+
+.cc-tri-r {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: right right 0 right;
+  border-color: 10px transparent transparent transparent;
+  margin-bottom: 10px;
+}
+
+.cc-tri-d {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: down down 0 down;
+  border-color: 10px transparent transparent transparent;
+  margin-bottom: 10px;
+}
+
+.cc-tri-u {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: up up 0 up;
+  border-color: 10px transparent transparent transparent;
+  margin-bottom: 10px;
+}
