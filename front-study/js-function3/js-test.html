@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>JS限制输入小数的时候只允许数字</h2>
+        <!-- JS允许输⼊⼩数，只能是数字，如果是其他字符，则会替换掉 -->
+        <input type="text" onkeyup="clearNoFloat(this)" />
+        <h2>JS限制输⼊只能是整数</h2>
+        <!-- ⽂本框输⼊s⾮数字会被清除替换 -->
+        <input type="text" onkeyup="clearNoInt(this)" />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js-url-hurdle.js"></script>
+    <script src="./js-limit-decimals.js"></script>
+    <script src="./js-limit-integer.js"></script>
+    <script src="./js-change-general.js"></script>
+    <script src="./js-judge-browser.js"></script>
+    <script src="./js-judge-phone.js"></script>
+    <script src="./js-object-formData.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {},
+            created() { },
+        })
+    </script>
+</body>
+
+</html>
