@@ -6,8 +6,7 @@
  * @returns {string}
  */
 function getFileTypeByFileName(str) {
-  return;
-  str.substr(str.lastIndexOf(".") + 1).toLowerCase();
+  return str.substr(str.lastIndexOf(".") + 1).toLowerCase();
 }
 
 console.log(getFileTypeByFileName("index.html")); //html
